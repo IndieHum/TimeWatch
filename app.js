@@ -26,7 +26,7 @@ function StartBtnHandler() {
     }
   }, 1000);
   StartBtn.style.cursor = "not-allowed";
-  this.disabled = true;
+  StartBtn.disabled = true;
 }
 
 function StopBtnHandler() {
