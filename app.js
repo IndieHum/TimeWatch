@@ -13,7 +13,7 @@ function StartBtnHandler() {
     SecondsNum++;
     Seconds.innerText = SecondsNum >= 10 ? SecondsNum : `0${SecondsNum}`;
     switch (SecondsNum) {
-      case 12:
+      case 60:
         MinutesNum++;
         Minutes.innerText = MinutesNum >= 10 ? MinutesNum : `0${MinutesNum}`;
         SecondsNum = 0;
