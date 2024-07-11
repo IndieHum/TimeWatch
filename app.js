@@ -9,6 +9,7 @@ let SecondsNum = 0;
 let MainInterval;
 
 function StartBtnHandler() {
+<<<<<<< HEAD
     MainInterval = setInterval(() => {
         SecondsNum++;
         Seconds.innerText = SecondsNum >= 10 ? SecondsNum : `0${SecondsNum}`;
@@ -29,6 +30,26 @@ function StartBtnHandler() {
     }, 1000);
     StartBtn.style.cursor = "not-allowed";
     StartBtn.disabled = true;
+=======
+  MainInterval = setInterval(() => {
+    SecondsNum++;
+    Seconds.innerText = SecondsNum >= 10 ? SecondsNum : `0${SecondsNum}`;
+    switch (SecondsNum) {
+      case 60:
+        MinutesNum++;
+        Minutes.innerText = MinutesNum >= 10 ? MinutesNum : `0${MinutesNum}`;
+        SecondsNum = 0;
+        break;
+    }
+    switch (MinutesNum) {
+      case 61:
+        alert("you made that!");
+        return;
+    }
+  }, 1000);
+  StartBtn.style.cursor = "not-allowed";
+  StartBtn.disabled = true;
+>>>>>>> d0cd2528a016996cf979c021645c5b308035d142
 }
 
 function StopBtnHandler() {
